@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Movie Store User Account Delection</title>
+
+    <style>
+        .center {
+            margin: auto;
+            width: 50%;
+            border: 1px solid #6e6d6d;
+            padding: 20px;
+            border-radius: 5px;           
+            }
+
+        .divInput{
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .textInput{
+            margin-top: 10px;
+            width: 400px;
+            height: 30px;
+            border: 1px solid #ccc;
+        }
+
+        .button{
+            margin-top: 20px;
+            width: 100px;
+            height: 30px;
+            background-color: rgb(32, 131, 244);
+            border: none;
+        }
+
+        .button:hover{
+            background-color: rgb(50, 113, 238);
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        function submitEvent() {
+            if(txtUserNameEmail.value.length==0){
+                alert("Please enter user name or email");
+                return;
+            }
+            alert("Your account deletion request has been sent successfully!");
+        }
+    </script>
 </head>
 <body>
-    <h1>Hi, I am git</h1>
+    <div class="center">
+        <h1>Account Deletion Request for Movie Store Application</h1>
+
+        <div class="divInput">
+            <label>UserName or Email<span style="color: red;padding-left: 5px;">*</span></label><br/>
+            <input id="txtUserNameEmail" type="text" class="textInput"/>
+        </div>
+
+        <div class="divInput">
+            <label>Reason</label><br/>
+            <input type="text" class="textInput"/>
+        </div>
+
+        <div style="margin-top: 30px;padding-left: 20px;">
+            <button id="btnSubmit" class="button" onclick="submitEvent()">Submit</button>
+        </div>
+    </div>
+    
 </body>
 </html>
